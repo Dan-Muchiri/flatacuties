@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", () => {
       const detailsContainer = document.createElement("div");
       detailsContainer.innerHTML = `<img src="${animal.image}" alt="${animal.name}">
                                   <p>Name: ${animal.name}</p>
-                                  <p>Votes: <span id="votes-count">${animal.votes}</span></p>
-                                  <button class="vote-button" data-animal-id="${animal.id}">Vote</button>`;
+                                  <p>Votes: <span id="votes-count-${animal.id}">${animal.votes}</span></p>
+                                  <button class="vote-button" data-animal-id="${animal.id}">Vote for ${animal.name}</button>`;
       animalDetails.appendChild(detailsContainer);
 
       const voteButton = detailsContainer.querySelector(".vote-button");
@@ -38,10 +38,37 @@ document.addEventListener("DOMContentLoaded", () => {
       if (selectedAnimal) {
           selectedAnimal.votes += 1;
 
-          const votesElement = document.getElementById("votes-count");
+          const votesElement = document.getElementById(`votes-count-${animalId}`);
           if (votesElement) {
               votesElement.textContent = selectedAnimal.votes;
           }
       }
+      const resetContainer = document.getElementById('reset-container');
+      resetContainer.style.display ="block";
   }
+
+  const resetButton = document.getElementById('reset-votes');
+  resetButton.addEventListener("click", resetVotes);
+
+  function resetVotes() {
+      data.forEach(animal => {
+          animal.votes = 0;
+          const votesElement = document.getElementById(`votes-count-${animal.id}`);
+          if (votesElement) {
+              votesElement.textContent = 0;
+          }
+      });
+      const resetContainer = document.getElementById('reset-container');
+      resetContainer.style.display = "none"; 
+  }
+
+  function addAnimal() {
+    const addBtn = document.querySelector('.add-btn')
+    addBtn.addEventListener("click", () => {
+      const addForm = document.getElementById('add-animal-form');
+      addForm.style.display = 'block';
+    });
+  }
+
+  addAnimal();
 });

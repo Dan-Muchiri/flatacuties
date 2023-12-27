@@ -10,18 +10,10 @@
 <body>
     <header>
         <h1>Flatacuties</h1>
-            <form id="add-animal-form">
-                <p>Add your own animal!</p>
-                <div class="first-input" >
-                <label for="animal-name">Name:</label>
-                <input type="text" id="animal-name" name="animal-name" required>
-                </div>
-                <div>
-                <label for="animal-image">Image URL:</label>
-                <input type="url" id="animal-image" name="animal-image" required>
-                </div>
-                
-                <button class="submit" type="submit">Add Animal</button>
+        <div id="reset-container">
+            <button id="reset-votes">Reset Votes</button>
+        </div>
+        <button class="add-btn" >Add your own animal!</button>
     </header>
     <div id="content">
         <p>Which animal do you think is the cutest? Click on the contestants below to view them and vote!</p>
@@ -29,7 +21,20 @@
         
         <div id="animal-details" class="animal-details"></div>
     </div>
-    <button id="reset-votes">Reset Votes</button>
+
+    <form id="add-animal-form">
+        <p>Add your own animal!</p>
+        <div class="first-input" >
+        <label for="animal-name">Name:</label>
+        <input type="text" id="animal-name" name="animal-name" required>
+        </div>
+        <div>
+        <label for="animal-image">Image URL:</label>
+        <input type="url" id="animal-image" name="animal-image" required>
+        </div>
+        
+        <button class="submit" type="submit">Add Animal</button>
+
     <script src="script.js"></script>
 </body>
 </html>

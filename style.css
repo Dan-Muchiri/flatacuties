@@ -8,12 +8,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120px;
+    height: 125px;
   }
   #add-animal-form{
+    display: none;
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 20px;
+    bottom: 150px;
     border: solid;
     padding-left: 5px;
     padding-right: 5px;
@@ -39,12 +40,15 @@ body {
     padding: 6px;
     font-size: 40px;
   }
+  .add-btn{
+    position: absolute;
+    right: 30px;
+  }
 
   p{
     text-align: center;
     font-size: 30px;
     margin: 5px;
-
   }
 
 #animal-list{
@@ -87,9 +91,19 @@ button:active{
     width: auto;
     border-radius: 20px;
   }
-#reset-votes{
+.vote-button{
+  position: absolute;
+  top: 370px;
+  left: 250px;
+  padding: 15px;
+}
+#reset-container {
   position: absolute;
   top: 35px;
   left: 100px;
+  display: none; 
+}
+
+#reset-votes {
   padding: 20px;
 }
