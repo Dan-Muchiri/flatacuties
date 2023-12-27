@@ -7,7 +7,28 @@ body {
   header {
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    height: 120px;
+  }
+  #add-animal-form{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    border: solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 5px;
+    border-radius: 8px;
+  }
+  form p{
+    font-size: 20px;
+    margin-top: 0;
+  }
+  .first-input{
+    margin-left: 37px;
+  }
+  .submit{
+    margin-left: 80px;
   }
   h1{
     margin: 10px;
@@ -66,4 +87,9 @@ button:active{
     width: auto;
     border-radius: 20px;
   }
-  
+#reset-votes{
+  position: absolute;
+  top: 35px;
+  left: 100px;
+  padding: 20px;
+}
