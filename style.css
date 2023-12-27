@@ -4,13 +4,14 @@ body {
     padding: 0;
   }
   
-  header {
+header {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 125px;
-  }
-  #add-animal-form{
+  } 
+  
+#add-animal-form{
     display: none;
     position: absolute;
     right: 20px;
@@ -21,17 +22,21 @@ body {
     padding-bottom: 5px;
     border-radius: 8px;
   }
-  form p{
+
+form p{
     font-size: 20px;
     margin-top: 0;
   }
-  .first-input{
+
+.first-input{
     margin-left: 37px;
   }
-  .submit{
+
+.submit{
     margin-left: 80px;
   }
-  h1{
+
+h1{
     margin: 10px;
     width: 200px;
     border: solid;
@@ -40,12 +45,13 @@ body {
     padding: 6px;
     font-size: 40px;
   }
-  .add-btn{
+
+.add-btn{
     position: absolute;
     right: 30px;
   }
 
-  p{
+p{
     text-align: center;
     font-size: 30px;
     margin: 5px;
@@ -58,7 +64,7 @@ body {
     padding-right: 50px;
 }
   
-  button {
+button {
   padding: 5px;
   border: solid;
   border-radius: 4px;
@@ -80,23 +86,25 @@ button:active{
     opacity: 0.4;
 }
   
-  .animal-details {
+.animal-details {
     display: flex;
     justify-content: center;
     margin-top: 35px;
   }
   
-  img {
+img {
     max-height: 270px;
     width: auto;
     border-radius: 20px;
   }
+
 .vote-button{
   position: absolute;
   top: 370px;
   left: 250px;
   padding: 15px;
 }
+
 #reset-container {
   position: absolute;
   top: 35px;

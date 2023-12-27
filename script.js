@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
   
+
     function showAnimalDetails(animal) {
         animalDetails.innerHTML = "";
   
@@ -35,6 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
   
+
     function addVote(animalId) {
         const selectedAnimal = data.find(animal => animal.id === animalId);
         if (selectedAnimal) {
@@ -73,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
   
     showAddForm();
 
-
+    
     addForm.addEventListener('submit', function(event) {
       event.preventDefault();
       const animalNameInput = document.getElementById('animal-name');
